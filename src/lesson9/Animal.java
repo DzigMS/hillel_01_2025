@@ -1,8 +1,11 @@
 package lesson9;
 
+import lesson12.Voicable;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class Animal {
+public abstract class Animal implements Voicable, Comparable<Animal> {
     protected String name;
     protected String color;
     protected Date dob;
@@ -47,11 +50,18 @@ public class Animal {
         this.weight = weight;
     }
 
-    public void voice() {
-        System.out.println("Hello from Animal, my name is: " + name);
+    public void voice(String phrase) {
+        System.out.println("Hello from Animal, my name is: " + name + " " + phrase);
     }
+
+    public abstract void voice();
 
     public void eat(Food food) {
         System.out.println("Cat + " + name + " eat food " + food.getName());
+    }
+
+    public int compareTo(Animal animal) {
+        return this.name.compareTo(animal.name);
+//        return 0;
     }
 }

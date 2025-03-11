@@ -17,11 +17,12 @@ public class Main {
         generalDoctor.learnSurgery();
         generalDoctor.surgery();
 
-        GeneralDoctor generalDoctor1 = new GeneralDoctor.GeneralDoctorBuilder()
-                .setName("Greg")
-                .setSpecialization("someSpecialization")
-                .build();
-
-        System.out.println(generalDoctor1.getName());
+//
+//        GeneralDoctor generalDoctor1 = new GeneralDoctor.GeneralDoctorBuilder()
+//                .setName("Greg")
+//                .setSpecialization("someSpecialization")
+//                .build();
+//
+//        System.out.println(generalDoctor1.getName());
     }
 }

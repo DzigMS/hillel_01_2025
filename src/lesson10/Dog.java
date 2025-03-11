@@ -2,9 +2,10 @@ package lesson10;
 
 import lesson9.Animal;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Serializable {
     private String breed;
 
     public Dog(String name, String color, Date dob, double weight) {
@@ -36,4 +37,8 @@ public class Dog extends Animal {
     public void voice() {
         System.out.println("Woof, my name is: " + name);
     }
+
+//    public int compareTo(Animal dog) {
+//        return 0;
+//    }
 }

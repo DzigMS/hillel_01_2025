@@ -28,11 +28,17 @@ public class GeneralDoctor {
         surgeryPossibility.surgery();
     }
 
+    public Surgery getSurgery(){
+        return this.surgeryPossibility;
+    }
+
     public void learnSurgery() {
         surgeryPossibility = new Surgery();
     }
 
     private class Surgery {
+        public String additionalField;
+
         public void surgery(){
             System.out.println("Processing surgery");
         }

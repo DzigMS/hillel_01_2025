@@ -1,5 +1,7 @@
 package lesson11;
 
+import lesson12.Engine;
+
 public class Car {
     public class InnerClass {
     }
@@ -11,12 +13,18 @@ public class Car {
 
     private String brand;
     private String color;
+    public final Engine engine;
 
 
-    public Car(String brand, String color) {
+    public Car(String brand, String color, Engine engine) {
         this.brand = brand;
         this.color = color;
+        this.engine = engine;
         quantity++;
+    }
+
+    public Engine getEngine() {
+        return engine;
     }
 
     public String getBrand() {
