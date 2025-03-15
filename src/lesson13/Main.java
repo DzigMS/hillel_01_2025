@@ -21,12 +21,6 @@ public class Main {
         integers.add("asda");
 
         LinkedList<Integer> linkedList = new LinkedList<>(integers);
-
-
-
-
-
-
     }
 
     public static List<Integer> getIntegers() {
