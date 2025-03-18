@@ -23,9 +23,20 @@ public class Main {
         food.put("ice_cream", "cherry");
         System.out.println(modifyFoodMap(food));
 
-        food.clear();
-        food.put("yogurt", "salt");
-        System.out.println(modifyFoodMap(food));
+//        food.clear();
+//        food.put("yogurt", "salt");
+//        System.out.println(modifyFoodMap(food));
+
+        Set<String> keys = food.keySet();
+        for (String key: keys) {
+            System.out.println("key: " + key + " value: " + food.get(key));
+        }
+
+        Set<Map.Entry<String, String>> foods = food.entrySet();
+
+        for (Map.Entry<String, String> dishes: foods) {
+            System.out.println("key: " + dishes.getKey() + " value: " + dishes.getValue());
+        }
     }
 
 //    Необхідно модифікувати цей словник за такою умовою: якщо ключ "ice cream" має значення,
