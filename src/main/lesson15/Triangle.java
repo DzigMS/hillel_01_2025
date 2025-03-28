@@ -7,12 +7,7 @@ public class Triangle {
     private int thirdSide;
 
     public Triangle(int firstSide, int secondSide, int thirdSide) {
-        if ((firstSide + secondSide <= thirdSide) ||
-                (secondSide + thirdSide <= firstSide) ||
-                (firstSide + thirdSide <= secondSide)) {
-//            throw new IllegalArgumentException("asdfas");
-            throw new OwnException();
-        }
+        TriangleValidator.checkTriangleSides(firstSide, secondSide, thirdSide);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.thirdSide = thirdSide;
