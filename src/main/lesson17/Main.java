@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Start");
         try {
             WebDriver browser = new ChromeDriver();
+//            browser.manage().window().maximize();
             Runtime.getRuntime().addShutdownHook(new Thread(browser::quit));
             Thread.sleep(2000);
             browser.get("https://privatbank.ua/");

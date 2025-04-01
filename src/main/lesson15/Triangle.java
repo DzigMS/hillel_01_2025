@@ -12,4 +12,8 @@ public class Triangle {
         this.secondSide = secondSide;
         this.thirdSide = thirdSide;
     }
+
+    public double getPerimeter() {
+        return firstSide + secondSide + thirdSide;
+    }
 }
